@@ -55,10 +55,25 @@ a {
   justify-content: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .login {
+    display: block;
+  }
+}
+
 .login__container {
   min-width: 400px;
   color: #fff;
 }
+
+@media screen and (max-width: 1024px) {
+  .login__container {
+    min-width: initial;
+    height: 100%;
+    background: var(--dark-color-b);
+  }
+}
+
 
 .login__header {
   text-align: center;
@@ -66,6 +81,12 @@ a {
   background: var(--dark-color-a);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .login__header {
+    border-radius: 0;
+  }
 }
 
 .login__header h1 {
@@ -122,6 +143,16 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1024px) {
+  .chat__container {
+    max-width: initial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
 .chat__header {
   background: var(--dark-color-a);
   color: #fff;
@@ -133,9 +164,27 @@ a {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1024px) {
+  .chat__header {
+    border-radius: 0;
+    padding: 0 15px;
+    min-height: 58px;
+    max-height: 58px;
+  }
+}
+
 .chat__main {
   display: grid;
   grid-template-columns: 1fr 3fr;
+}
+
+@media screen and (max-width: 1024px) {
+  .chat__main {
+    display: block;
+    height: 100%;
+    max-height: calc(100vh - 152px);
+    overflow-y: scroll;
+  }
 }
 
 .chat__sidebar {
@@ -145,9 +194,15 @@ a {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 1024px) {
+  .chat__sidebar {
+    display: none;
+  }
+}
+
 .chat__sidebar h2 {
   font-size: 20px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(129, 116, 116, 0.1);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -164,6 +219,12 @@ a {
   padding: 30px;
   max-height: 500px;
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 1024px) {
+  .chat__messages {
+    max-height: initial;
+  }
 }
 
 .chat__messages .message {
@@ -190,6 +251,18 @@ a {
   background-color: var(--dark-color-a);
 }
 
+@media screen and (max-width: 1024px) {
+  .chat__form-container {
+    padding: 0 30px;
+    min-height: 94px;
+    max-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 .chat__form-container form {
   display: flex;
 }
@@ -199,14 +272,4 @@ a {
   padding: 5px;
   height: 40px;
   flex: 1;
-}
-
-@media (max-width: 700px) {
-  .chat__main {
-    display: block;
-  }
-
-  .chat__sidebar {
-    display: none;
-  }
 }
