@@ -226,6 +226,7 @@ a {
 @media screen and (max-width: 1024px) {
   .chat__messages {
     max-height: initial;
+    width: auto;
   }
 }
 
